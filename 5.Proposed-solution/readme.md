@@ -10,6 +10,7 @@
 
 
 * [ ] [Architectural Overview](architectural-overview.md#architectural-overview)
+* [ ] [Guardrails](guardrails.md#guardrails)
 
 
 ### **Tasks**

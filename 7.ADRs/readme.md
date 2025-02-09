@@ -8,6 +8,11 @@
 
 > List of ADRs
 
+### Suggestions 
+1. Framework? LLM mesh vs agent orchestration
+        
+
+2. 
 
 ### **Tasks**
 * [ ] Identify key architectural decisions

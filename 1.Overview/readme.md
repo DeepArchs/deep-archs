@@ -23,7 +23,7 @@
 
 ### **Tasks**
 
-* [ ] Define project scope
+* [X] IG-  Define project scope
 * [ ] Identify key stakeholders
 * [ ] Provide high-level system description
 * [ ] List primary use cases
