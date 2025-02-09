@@ -1,22 +1,24 @@
-# [Overview](overview/Readme.md)
+# AI  
 
-# [Business Goals](business-goals/Readme.md)
+## [Overview](1.Overview/readme)
 
-# [Drivers & Requirements](drivers-requirements/Readme.md)
-## [Functional Requirements](drivers-requirements/functional-requirements.md)
-## [Non-Functional Requirements](drivers-requirements/non-functional-requirements.md)
+## [Business Goals](2.Business-goals/readme)
 
-# [Problem Background](problem-background/Readme.md)
-## [Legacy System Challenges](problem-background/legacy-system-challenges.md)
-## [AI Integration Opportunity](problem-background/ai-integration-opportunity.md)
+## [Drivers & Requirements](3.Drivers-requirements/readme)
+### [Functional Requirements](3.Drivers-requirements/functional-requirements.md)
+### [Non-Functional Requirements](3.Drivers-requirements/non-functional-requirements.md)
 
-# [Proposed Solution](proposed-solution/Readme.md)
-## [Architectural Overview](proposed-solution/architectural-overview.md)
+## [Problem Background](4.Problem-background/readme)
+### [Legacy System Challenges](4.Problem-background/legacy-system-challenges.md)
+### [AI Integration Opportunity](4.Problem-background/ai-integration-opportunity.md)
 
-# [Diagrams Summary](diagrams-summary/Readme.md)
+## [Proposed Solution](5.Proposed-solution/readme)
+### [Architectural Overview](5.Proposed-solution/architectural-overview.md)
 
-# [Architectural Decision Records (ADRs) for AI Implementations](adr-ai/Readme.md)
+## [Diagrams Summary](6.Diagrams/readme)
 
-# [Pertinent Implementation Details](implementation-details/Readme.md)
+## [Architectural Decision Records (ADRs) for AI Implementations](7.ADRs/readme)
 
-# [Conclusion](conclusion/Readme.md)
+## [Pertinent Implementation Details](8.Implementation-details/readme)
+
+## [Conclusion](9.Conclusion/readme)
