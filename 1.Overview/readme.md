@@ -6,6 +6,8 @@
 
 # Overview
 
+
+
 ## Project Scope
 
 ## Stakeholders
@@ -23,7 +25,7 @@
 
 ### **Tasks**
 
-* [X] IG-  Define project scope
+* [ ] Define project scope
 * [ ] Identify key stakeholders
 * [ ] Provide high-level system description
 * [ ] List primary use cases

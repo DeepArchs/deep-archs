@@ -6,6 +6,20 @@
 
 # Problem Background
 
+### **Tasks**
+* [ ] Identify current challenges in the system
+
+
+* [ ] Document limitations of the legacy system
+* [ ] Analyze historical issues and failures
+* [ ] Define business pain points
+* [ ] Determine gaps in existing solutions
+* [ ] Establish rationale for system improvements
+* [ ] Gather insights from stakeholders
+
+
+
+
 [Legacy System Challenges](legacy-system-challenges.md)  
 [AI Integration Opportunity](ai-integration-opportunity.md)
 
