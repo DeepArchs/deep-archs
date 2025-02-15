@@ -61,7 +61,7 @@ The solution should include some form of continuous calibration, e.g. a small po
 
 # Guardrails and tamper prevention
 
-LLMs are suspect to tampering attempts because there is no hard separation between instructions and user input. Prompt Hacking is [easy to implement (see chapter 5)](../references.md#llm-hacks)  especially in the short answer questions of the Test 1.
+LLMs are suspect to tampering attempts because there is no hard separation between instructions and user input. Prompt Hacking is [easy to implement (see chapter 5)](../references.md#llm-hacks) especially in the short answer questions of the Test 1.
 
 Basic tamper prevention may include another LLM that looks for new instructions or question overrides in the answers submitted by a student. This LLM would raise suspicious answers for an extra check by a human evaluator.
 
