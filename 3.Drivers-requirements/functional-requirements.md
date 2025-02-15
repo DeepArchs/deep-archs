@@ -44,13 +44,6 @@ __*Business Objective:*__ *Enhance the sensitivity of the test to user fraud.*
 - For Test 2, if a candidate submits a similar submission to one made by another candidate in the past or present, AI should detect it and flag it for administrative review.
 
 
-### **Tasks**
-* [ ] List all functional requirements
-* [ ] Map requirements to business objectives
-* [ ] Define user roles and permissions
-* [ ] Identify system interactions and workflows
-* [ ] Validate functional requirements with stakeholders
-* [ ] Create use case scenarios for each function
 
 ---
 
