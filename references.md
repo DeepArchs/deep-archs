@@ -10,3 +10,7 @@ https://www.youtube.com/watch?v=J34QlfqOQU8&ab_channel=Dataiku
 3 Introducing the LLM Mesh
 https://www.youtube.com/watch?v=yyYaUcZUD4g&t=359s&ab_channel=Dataiku
 
+
+
+<a name="llm-hacks"></a>
+10 Chiang, Cheng-Han, Wei-Chih Chen, Chun-Yi Kuan, Chienchou Yang, and Hung-yi Lee. "Large language model as an assignment evaluator: Insights, feedback, and challenges in a 1000+ student course." arXiv preprint arXiv:2407.05216 (2024).
