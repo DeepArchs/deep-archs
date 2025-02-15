@@ -76,7 +76,7 @@ The AI enhancements will focus on:
 ## Challenges
 
 - **Accuracy & Reliability** – AI must **match expert grading quality** to avoid certification disputes.
-- **Cost Management** – AI processing must **balance cloud-based vs. local inference** to minimize costs.
+- **Cost Management** – AI processing must balance API access to **proprietary LLMs** (e.g., OpenAI, Anthropic) vs. **self-hosted open-source** LLMs (e.g., Llama, Mistral) to optimize costs while maintaining performance and scalability.
 - **AI Governance & Ethics** – AI decisions must be **transparent, fair, and unbiased**.
 - **Change Management** – Transitioning expert graders to an **AI-supported workflow**.
 
