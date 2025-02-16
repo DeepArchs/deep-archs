@@ -66,7 +66,11 @@ LLMs are suspect to tampering attempts because there is no hard separation betwe
 Basic tamper prevention may include another LLM that looks for new instructions or question overrides in the answers submitted by a student. This LLM would raise suspicious answers for an extra check by a human evaluator.
 
 
+# Implementation and feasibility
 
+Generative AI is a very simple thing by itself: an open-text query called "prompt" that returns an open-text answer. "Programming" an AI consists of changing the prompt by adding instructions or relevant context information. The basic self-hosted AI models require a suitable machine with a GPU or other AI accelerator hardware, a software library providing an API access to an AI model (multiple free versions exist with highly mature code), and the model weights (multiple versions available, some are free for commercial use). Prompt generation can be done via any programming tools. Thus feasibility is not an issue.
+
+3rd party AI providers offer an API typically priced per unit of input/outgoing text. Some include covenience tools like returning answers in a structured data format. Pricing varies in a very large range, with simpler open source models running on non-mainstream providers being extremely cheap. A study is needed to estimate whether a self-hosted or a cheap API provider model is a better solution.
 
 
 ### **Tasks**
@@ -74,9 +78,9 @@ Basic tamper prevention may include another LLM that looks for new instructions 
 * [X] Identify automation opportunities
 * [ ] Assess AI’s impact on business goals
 * [X] List potential AI technologies to integrate
-* [ ] Define expected AI-driven benefits
+* [X] Define expected AI-driven benefits
 * [X] Address AI-related risks and limitations
-* [ ] Determine AI implementation feasibility
+* [X] Determine AI implementation feasibility
 
 
 ---
