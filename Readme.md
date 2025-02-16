@@ -14,6 +14,11 @@
 
 ## [Proposed Solution](5.Proposed-solution/readme)
 ### [Architectural Overview](5.Proposed-solution/architectural-overview.md)
+### [Test 1](5.Proposed-solution/test1.md)
+### [Test 2](5.Proposed-solution/test2.md)
+### [Study variations](5.Proposed-solution/study-variations.md)
+### [Improve assigment quality](5.Proposed-solution/improve-assignments.md)
+
 
 ## [Diagrams Summary](6.Diagrams/readme)
 
