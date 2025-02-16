@@ -5,7 +5,20 @@
 ---
 
 # Diagrams
-## Overall Architecture
+## AsIs Diagrams
+### Apptitude Test
+### Case Study Test 2
+### Certifiable Inc Processes
+### Certification Verification
+### Administration Flow
+### Testing Services 1 Architecture
+### Testing Services 2 Architecture
+### Administration Services Description
+### Test 1 Services Description
+### Test 2 Services Description
+## Future State Diagrams
+### Scenario Based Flow Diagram
+### Overall Implementation Architecture
 
 
 ### **Tasks**
