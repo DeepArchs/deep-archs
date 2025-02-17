@@ -13,9 +13,9 @@ Manual evaluation time is the main pain point in scaling up and the main cost at
 
 The business wants a solution that works 100% of time, for 100% of customers, 100% reliably. Humans work very reliably (say ~99.5%), the edge cases are rare thus can be handled with an established processes at reasonable cost. But the human systems are very expensive, so they always aim to minimize the amount of necessary work, or maximize the impact of one unit of work called "productivity".
 
-AI systems, and Generative AI especially, work differently from manual systems and the business requirements. AI is unreliable with ~90% correct solutions, but an AI unit of work cost is negligible when compared to a human worker (actual number: one line of code from Copilot is 10^5 times cheaper than from a software engineer). AI application development time can be comparable to the regular software development time if the task is simple, feasible, and uses existing AI models or providers. The main design principle of AI is to have a system where the negative effect of 1 wrong decision does not override the positive effect of 9 correct decisions.
+AI systems, and Generative AI especially, work differently from manual systems and the business requirements. AI is less reliable so the automated applications must be designed to handle gradings that can be incorrect, but an AI unit of work cost is negligible when compared to a human worker (actual number: one line of code from Copilot is 10^5 times cheaper than from a software engineer). AI application development time can be comparable to the regular software development time if the task is simple, feasible, and uses existing AI models or providers. The main design principle of AI is to have a system where the negative effect of 1 wrong decision does not override the positive effect of 9 correct decisions.
 
-Because of the differences between human and AI based systems, the proposed solution need to change the existing business logic to make it feasible in the AI model. The AI evaluation quality would be the same or better than the human evaluation, with an ability to calibrate AI grades and an experimental validation.
+Because of the differences between human and AI based systems, the proposed solution need to change the existing business logic to make it feasible in the AI model. The AI-based evaluation quality would be the same or better than the human evaluation, with an ability to calibrate AI grades and an experimental validation.
 
 
 # Implementation of AI evaluation systems
@@ -61,9 +61,9 @@ The solution should include some form of continuous calibration, e.g. a small po
 
 # Guardrails and tamper prevention
 
-LLMs are suspect to tampering attempts because there is no hard separation between instructions and user input. Prompt Hacking is [easy to implement (see chapter 5)](../references.md#llm-hacks) especially in the short answer questions of the Test 1.
+AI models help detecting cheating/plagiarism in Test 2, for example by using embedding methods or an adaptation of RAG that evaluates the submitted solution against the database of previous solutions.
 
-Basic tamper prevention may include another LLM that looks for new instructions or question overrides in the answers submitted by a student. This LLM would raise suspicious answers for an extra check by a human evaluator.
+LLMs are suspect to tampering attempts because there is no hard separation between instructions and user input. Prompt Hacking is [easy to implement (see chapter 5)](../references.md#llm-hacks) especially in the short answer questions of the Test 1. Basic tamper prevention may include another LLM that looks for new instructions or question overrides in the answers submitted by a student. This LLM would raise suspicious answers for an extra check by a human evaluator.
 
 
 # Implementation and feasibility
@@ -71,6 +71,9 @@ Basic tamper prevention may include another LLM that looks for new instructions 
 Generative AI is a very simple thing by itself: an open-text query called "prompt" that returns an open-text answer. "Programming" an AI consists of changing the prompt by adding instructions or relevant context information. The basic self-hosted AI models require a suitable machine with a GPU or other AI accelerator hardware, a software library providing an API access to an AI model (multiple free versions exist with highly mature code), and the model weights (multiple versions available, some are free for commercial use). Prompt generation can be done via any programming tools. Thus feasibility is not an issue.
 
 3rd party AI providers offer an API typically priced per unit of input/outgoing text. Some include covenience tools like returning answers in a structured data format. Pricing varies in a very large range, with simpler open source models running on non-mainstream providers being extremely cheap. A study is needed to estimate whether a self-hosted or a cheap API provider model is a better solution.
+
+
+Cost optimisation is an important part of AI systems, as heavy usage of a 3rd party AI providers could get expensive. There are at least two ways of cost reduction. The most efficient one is evaluating cheaper models, that can be employed if their performance is proven sufficient. The price difference between expensive specialized models and cheap open source deployments can exceed 100x. The second way is prompt and output optimization, reducing the amount of text that goes in and out of a model. AI model computation requirements, and thus costs, relate directly to the amount of incoming and outbounding text. Evaluating alternative prompts uses the same tools as evaluating alternative models, and is judged by the same criteria.
 
 
 ### **Tasks**
