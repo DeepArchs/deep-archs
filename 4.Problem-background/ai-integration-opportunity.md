@@ -66,6 +66,13 @@ AI models help detecting cheating/plagiarism in Test 2, for example by using emb
 LLMs are suspect to tampering attempts because there is no hard separation between instructions and user input. Prompt Hacking is [easy to implement (see chapter 5)](../references.md#llm-hacks) especially in the short answer questions of the Test 1. Basic tamper prevention may include another LLM that looks for new instructions or question overrides in the answers submitted by a student. This LLM would raise suspicious answers for an extra check by a human evaluator.
 
 
+# Candidates Support & Feedback Loop
+
+AI decisions can be wrong, so services based on them should include transparency and feedback mechanisms. AI model would write summaries of mistakes from failed answers, that could be shared with the candidates. Grading decisions can be challenged if candidates disagree with the summary of mistakes, or think that the evaluation was wrong.
+
+Some questions can by chance have an inconveniet formulation for AI, causing frequent incorrect gradings. These questions are tracked in the internal feedback loop, and are considered for an updated formulation or replacement by test maintainers.
+
+
 # Implementation and feasibility
 
 Generative AI is a very simple thing by itself: an open-text query called "prompt" that returns an open-text answer. "Programming" an AI consists of changing the prompt by adding instructions or relevant context information. The basic self-hosted AI models require a suitable machine with a GPU or other AI accelerator hardware, a software library providing an API access to an AI model (multiple free versions exist with highly mature code), and the model weights (multiple versions available, some are free for commercial use). Prompt generation can be done via any programming tools. Thus feasibility is not an issue.
