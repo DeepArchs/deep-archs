@@ -13,8 +13,9 @@ The existing certification system of Certifiable Inc. is put under pressure by t
 
 - existing expert consultants who provide manual evaluations cannot handle the 5-10x increase in workload
 - direct scaleup is slow because employing a large number of new expert consultants takes bandwidth from the existing employees for onboarding
+- however deploying an AI based solution also creates additional work for regular checking and validation of model scores
 - direct scaleup is likely to temporary decrease the certification quality until the new evaluators got more experience
-- scale up in any way is costly, and the proposed solution should ideally increase the margins to cover this cost
+- scale up in any way is costly, and the proposed solution should ideally increase the margins to cover this cost; the dynamic scaling of AI solution makes it very cost-effective
 
 
 ## Additional challenges of Certifiable Inc. business
@@ -41,6 +42,7 @@ Specific integration challenges are:
 - update business workflows to include AI, e.g. implement preliminary question assessment by AI **and** educate the evaluators to use these assessments for faster but equally precise evaluations
 - update the tools of evaluators, test maintenance, test analysis for integration with AI
 - deploy a global AI model performance analytics platform that includes cost, latency, relevance of model predictions to the final grade as a measure of model performance
+- create and implement AI cost optimization system e.g. using dynamic scaling or running on-demand rather than continuously
 - deploy an A/B test solution for the evaluation and migration of new AI models
 - deploy safeguards against tampering with the AI models, at least tamper detection and warnings visible to the evaluators
 
