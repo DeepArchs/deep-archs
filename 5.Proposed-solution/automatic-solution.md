@@ -18,10 +18,10 @@ The evaluation workload is split into automatic/manual parts in two dimensions: 
 
 ![alt text](gradings.png)
 
-1. AI system can evaluate all questions except Q3 with sufficient precision. It still produces grades for Q3 but they are less reliable. Human evaluators only need to grade question 3.
+1. AI system can evaluate all questions except Q3 with sufficient precision. Human evaluators only need to grade question 3.
 2. Student 1 received very high grades in questions 1,2,4,5 reliably evaluated by AI. This student passes the test automatically without even grading the remaining question 3. Likewise, student 5 received all low grades in automatically evaluated questions and fails the test automatically without evaluating question 3.
 
-The remaining manual work consists of grading question 3 for students 2,3,4 whose pass of failing depends on the outcomes of manual grading, and cannot be predicted with AI from the available data with enough precision.
+The remaining manual work consists of grading question 3 for students 2,3,4 (shown in gray) whose pass of failing depends on the outcomes of manual grading, and cannot be predicted with AI from the available data with enough precision.
 
 **Important:**  The decisions of which questions to grade with AI and which students to pass/fail with AI are computed on the existing dataset of 120,000 certifications. These are valid for only one AI model, and need to be re-adjusted for different models and different model settings.
 
