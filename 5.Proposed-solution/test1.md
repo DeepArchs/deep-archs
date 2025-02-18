@@ -16,6 +16,8 @@ We propose three ways of splitting the workload from human evaluators to AI:
 2. AI may get poor performance on specific questions because of the way they are formulated, vague evaluation criteria, or very broad acceptable answers. Some questions can be re-formulated or directly replaced to make them "AI friendly" and transfer their grading to AI.
 3. Even from partial gradings, it is possible to deduct a reliable pass/fail decision for some candidates using an ML model trained and validated on the historical data. Candidates with automatic decision need no manual gradings at all.
 
+See [automatic solution](./automatic-solution.md) for details.
+
 
 
 ## Alternative human-in-the-loop solution to Test 1
