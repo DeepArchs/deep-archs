@@ -8,7 +8,7 @@
 
 The [High-Level Architecture](#architectural-overview) of the proposed generative AI solution is shown on the figure below.
 
-![AI architecture](ai-architecture.png)
+![AI architecture](../6.Diagrams/Future%20State/ai-architecture.png)
 
 
 ## Evaluation flow
