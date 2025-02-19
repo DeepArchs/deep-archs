@@ -6,3 +6,4 @@ Assignment quality is improved by a two-aspect system:
 
 1. AI assisted tools that flag questions with unclear formulation. AI is tasked with checking if a question is clear and understandable by people of diverse backgrounds, and with imperfect language skills.
 2. Including student feedback mechanism in the assigment itself. A simple "thumb down" button and a short instruction before the test enables students to flag questions that they feel are confusing, misleading, lack clarity, or otherwise should be improved.
+
