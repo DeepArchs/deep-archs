@@ -19,3 +19,7 @@ Chiang, Cheng-Han, Wei-Chih Chen, Chun-Yi Kuan, Chienchou Yang, and Hung-yi Lee.
 ## [6] LLM automated grading insights
 <a name="llm-acceptance"></a>
 11 Poličar, Pavlin G., Martin Špendl, Tomaž Curk, and Blaž Zupan. "Automated Assignment Grading with Large Language Models: Insights From a Bioinformatics Course." arXiv preprint arXiv:2501.14499 (2025).
+
+## [7] Who validates the validators?
+<a name="llm-validators"></a>
+Shankar, Shreya, J. D. Zamfirescu-Pereira, Björn Hartmann, Aditya Parameswaran, and Ian Arawjo. "Who validates the validators? aligning llm-assisted evaluation of llm outputs with human preferences." In Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology, pp. 1-14. 2024.

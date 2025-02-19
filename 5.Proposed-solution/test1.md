@@ -4,7 +4,23 @@
 The role of the first test is to validate that a candidate is familiar with the core concepts of software architecture. This is evident from the fact that a passed test counts towards the next certification attempts. The test has two parts: the multiple choice questions are evaluated automatically, and the short answer questions are evaluated manually with a 1 week response time, taking on average 3 hours of work.
 
 
-## Proposed solution to Test 1
+## Proposed Automatic solution to Test 1
+
+We aim to develop a fully automatic solution for grading the short answer questions with AI. Together with the existing automatic grading of multiple choice questions, it will cover the whole test 1 and solve the scaling challenge of Certifiable Inc. Human experts will continue to manually grade a small part of answers (~5%) to create the "ground truth" data for tuning AI models. Also new questions would need the initial manual gradings to ensure the AI performance meets the necessary standards.
+
+The fully automatic evaluation goal is challenging, and would not be achieved at the initial deployment. Instead, the grading work is split between AI and human evaluators in a way that ensures the required high quality standard. Over time the AI share of evaluations will grow until it reaches 100% at the same high standards.
+
+We propose three ways of splitting the workload from human evaluators to AI:
+
+1. Certifiable Inc. has a large dataset of 120,000 graded past assignments. AI model performance is evaluated on each short answer question of Test 1 separately. Questions where the AI model reaches necessary grading performance are automated. As AI models improve or our prompt engineering system improves, more questions could be transferred to AI.
+2. AI may get poor performance on specific questions because of the way they are formulated, vague evaluation criteria, or very broad acceptable answers. Some questions can be re-formulated or directly replaced to make them "AI friendly" and transfer their grading to AI.
+3. Even from partial gradings, it is possible to deduct a reliable pass/fail decision for some candidates using an ML model trained and validated on the historical data. Candidates with automatic decision need no manual gradings at all.
+
+See [automatic solution](./automatic-solution.md) for details.
+
+
+
+## Alternative human-in-the-loop solution to Test 1
 
 As Certifiable Inc. values its reputation and the quality of its assessments, we propose to keep a human evaluation in the loop for test 1. An AI system can do preliminary grading of the open questions to the test, and generate an automated grading summary with proposed scores and its confidence in the score. Additionally, the model will write a summary of its gradings that can be shared with the students as a feedback.
 
