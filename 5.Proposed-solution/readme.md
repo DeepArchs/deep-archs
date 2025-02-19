@@ -6,12 +6,13 @@
 
 # Proposed Solution
 
-[Architectural Overview](architectural-overview.md)
-
-
-* [ ] [Architectural Overview](architectural-overview.md#architectural-overview)
-* [ ] [Guardrails](guardrails.md#guardrails)
-
+* [Architectural Overview](architectural-overview.md)
+* [Automatic Solution Idea](automatic-solution.md)
+* [Solution for Test 1](test1.md#test-1)
+* [Solution for Test 2](test2.md#test-2)
+* [Generated Question Variations](study-variations.md)
+* [Generated Assignment Improvements](improve-assignments.md)
+* [Guardrails](guardrails.md)
 
 ### **Tasks**
 * [ ] Define the proposed system architecture
@@ -21,7 +22,6 @@
 * [ ] Compare proposed vs. existing system
 * [ ] Highlight expected improvements
 * [ ] Align the solution with business goals
-
 
 ---
 
