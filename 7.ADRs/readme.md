@@ -4,24 +4,16 @@
 
 ---
 
-# Architectural Decision Records (ADRs) for AI Implementations
+# Architectural Decision Records (ADRs)
 
 > List of ADRs
 
-### Suggestions 
-1. Framework? LLM mesh vs agent orchestration
-        
 
-2. 
+| ADR#                                       | Description                              |
+|--------------------------------------------|------------------------------------------|
+| [0001](0001-record-architecture-decisions) | Record architecture decisions            |
+| [0002](0002-test1)                         | AI-Enhanced Automated Grading for Test 1 |
 
-### **Tasks**
-* [ ] Identify key architectural decisions
-* [ ] Document reasoning behind each decision
-* [ ] Outline alternatives considered
-* [ ] Specify trade-offs and justifications
-* [ ] Ensure consistency with business and technical goals
-* [ ] Maintain versioning of decisions
-* [ ] Review decisions with stakeholders regularly
 
 
 ---
