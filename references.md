@@ -23,3 +23,7 @@ Chiang, Cheng-Han, Wei-Chih Chen, Chun-Yi Kuan, Chienchou Yang, and Hung-yi Lee.
 ## [7] Who validates the validators?
 <a name="llm-validators"></a>
 Shankar, Shreya, J. D. Zamfirescu-Pereira, Björn Hartmann, Aditya Parameswaran, and Ian Arawjo. "Who validates the validators? aligning llm-assisted evaluation of llm outputs with human preferences." In Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology, pp. 1-14. 2024.
+
+## [8] Enterprise GENERATIVE AI Well-Architected Framework & Patterns
+<a name="ai-patterns"></a>
+Suvoraj Biswas Published by Packt Publishing
