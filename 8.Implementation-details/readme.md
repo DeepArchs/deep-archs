@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](../7.ADRs/readme)  |  [Next >](../9.Conclusion/readme)
+[< Prev](../7.ADRs/readme.md)  |  [Next >](../9.Conclusion/readme.md)
 
 ---
 
@@ -57,4 +57,4 @@ The same gradual rollout is applied for the task variants of test 2. A new varia
 
 ---
 
-[< Prev](../7.ADRs/readme)  |  [Next >](../9.Conclusion/readme)
+[< Prev](../7.ADRs/readme.md)  |  [Next >](../9.Conclusion/readme.md)

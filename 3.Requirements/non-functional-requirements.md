@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](functional-requirements.md)  |  [Next >](../4.Problem-background/readme)
+[< Prev](functional-requirements.md)  |  [Next >](../4.Problem-background/readme.md)
 
 ---
 
@@ -612,4 +612,4 @@ By identifying and addressing these legal and compliance constraints, Certifiabl
 
 ---
 
-[< Prev](functional-requirements.md)  |  [Next >](../4.Problem-background/readme)
+[< Prev](functional-requirements.md)  |  [Next >](../4.Problem-background/readme.md)
