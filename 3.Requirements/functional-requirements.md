@@ -43,6 +43,22 @@ __*Business Objective:*__ *Enhance the sensitivity of the test to user fraud.*
 
 - For Test 2, if a candidate submits a similar submission to one made by another candidate in the past or present, AI should detect it and flag it for administrative review.
 
+_*Business Objective:*__ *Reduce administrator workload by creating suggestions for new questions and case studies.*
+
+- Administrators should be able to input documents and receive suggestions for new multiple-choice and short answer questions.
+- Administrators should be able to generate new case study ideas for Test 2 by providing a write-up document.
+
+**Different Flavors for Questions**
+
+__*Business Objective:*__ *Reduce administrator work by suggesting different flavors, i.e., different business domain scenarios for a selected question to increase questions with the same pattern and remove predictability of questions in exam scenarios.*
+
+- Administrators should be able to provide a sample question and receive variations adapted to different business domains.
+
+**Auto-Grading Options**
+
+__*Business Objective:*__ *Reduce expert workloads by providing auto-grading options.*
+
+- The system should provide auto-grading options for both multiple-choice and short answer questions to reduce the workload on experts.
 
 
 ---
