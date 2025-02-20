@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](readme)  |  [Next >](../6.Diagrams/readme)
+[< Prev](readme)  |  [Next >](../6.Diagrams/readme.md)
 
 ---
 
@@ -40,4 +40,4 @@ In additional to the initial validation, all AI models deployed into production 
 
 ---
 
-[< Prev](readme)  |  [Next >](../6.Diagrams/readme)
+[< Prev](readme)  |  [Next >](../6.Diagrams/readme.md)

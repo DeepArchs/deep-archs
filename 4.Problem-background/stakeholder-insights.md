@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](legacy-system-challenges.md)  |  [Next >](../5.Proposed-solution/readme)
+[< Prev](legacy-system-challenges.md)  |  [Next >](../5.Proposed-solution/readme.md)
 
 ---
 # Stakeholder Insights
@@ -30,4 +30,4 @@
     
 ---
 
-[< Prev](legacy-system-challenges.md)  |  [Next >](../5.Proposed-solution/readme)
+[< Prev](legacy-system-challenges.md)  |  [Next >](../5.Proposed-solution/readme.md)

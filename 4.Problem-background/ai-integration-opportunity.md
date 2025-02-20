@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](legacy-system-challenges.md)  |  [Next >](../5.Proposed-solution/readme)
+[< Prev](legacy-system-challenges.md)  |  [Next >](../5.Proposed-solution/readme.md)
 
 ---
 
@@ -95,4 +95,4 @@ Cost optimisation is an important part of AI systems, as heavy usage of a 3rd pa
 
 ---
 
-[< Prev](legacy-system-challenges.md)  |  [Next >](../5.Proposed-solution/readme)
+[< Prev](legacy-system-challenges.md)  |  [Next >](../5.Proposed-solution/readme.md)
