@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](../readme.md)  |  [Next >](../2.Business-goals/readme)
+[< Prev](../readme.md)  |  [Next >](../2.Business-goals/readme.md)
 
 ---
 
@@ -109,4 +109,4 @@ The AI enhancements will focus on:
 
 ---
 
-[< Prev](../readme.md)  |  [Next >](../2.Business-goals/readme)
+[< Prev](../readme.md)  |  [Next >](../2.Business-goals/readme.md)

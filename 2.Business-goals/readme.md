@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](../1.Overview/readme)  |  [Next >](../3.Drivers-requirements/readme)
+[< Prev](../1.Overview/readme.md)  |  [Next >](../3.Drivers-requirements/readme.md)
 
 ---
 
@@ -39,4 +39,4 @@
 
 ---
 
-[< Prev](../1.Overview/readme)  |  [Next >](../3.Drivers-requirements/readme)
+[< Prev](../1.Overview/readme.md)  |  [Next >](../3.Drivers-requirements/readme.md)

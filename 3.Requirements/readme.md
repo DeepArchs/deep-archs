@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](../2.Business-goals/readme)  |  [Next >](functional-requirements.md)
+[< Prev](../2.Business-goals/readme.md)  |  [Next >](functional-requirements.md)
 
 ---
 
@@ -13,4 +13,4 @@
 
 ---
 
-[< Prev](../2.Business-goals/readme)  |  [Next >](functional-requirements.md)
+[< Prev](../2.Business-goals/readme.md)  |  [Next >](functional-requirements.md)

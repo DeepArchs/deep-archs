@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Implementation details](../8.Implementation-details/readme)
+[< Implementation details](../8.Implementation-details/readme.md)
 
 ---
 
@@ -18,4 +18,4 @@
 
 ---
 
-[< Implementation details](../8.Implementation-details/readme)
+[< Implementation details](../8.Implementation-details/readme.md)

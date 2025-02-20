@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](../5.Proposed-solution/architectural-overview.md)  |  [Next >](../7.ADRs/readme)
+[< Prev](../5.Proposed-solution/architectural-overview.md)  |  [Next >](../7.ADRs/readme.md)
 
 ---
 
@@ -33,4 +33,4 @@
 
 ---
 
-[< Prev](../5.Proposed-solution/architectural-overview.md)  |  [Next >](../7.ADRs/readme)
+[< Prev](../5.Proposed-solution/architectural-overview.md)  |  [Next >](../7.ADRs/readme.md)
