@@ -80,7 +80,7 @@ Solution properties:
 
 ## ADR
 
-See [ADR-3](../7.ADRs/0003-test2.md) 
+See [ADR-3](../7.ADRs/0002-test2) 
 
 
 ---

@@ -48,22 +48,22 @@ We will adopt **Aurora PostgreSQL Global Cluster** for Certifiable Inc.'s databa
 
 ### **Positive Outcomes**
 
-✅ **Scalability:** Aurora PostgreSQL enables seamless scaling to handle increased workload efficiently.
-✅ **Performance:** Aurora's capabilities improve the performance of data storage and retrieval for AI-driven functionalities.
-✅ **Reliability:** Global Cluster deployments and automated backups ensure high data availability and durability.
-✅ **AI Integration:** Aurora's integration with AWS AI services enhances the capabilities of automated grading and other AI-driven functionalities.
-✅ **Security:** Robust security measures and compliance with data privacy regulations protect sensitive data.
+* [X]**Scalability:** Aurora PostgreSQL enables seamless scaling to handle increased workload efficiently.
+* [X]**Performance:** Aurora's capabilities improve the performance of data storage and retrieval for AI-driven functionalities.
+* [X]**Reliability:** Global Cluster deployments and automated backups ensure high data availability and durability.
+* [X]**AI Integration:** Aurora's integration with AWS AI services enhances the capabilities of automated grading and other AI-driven functionalities.
+* [X]**Security:** Robust security measures and compliance with data privacy regulations protect sensitive data.
 
 ### **Risks & Mitigation**
 
-⚠ **Risk: Vendor lock-in**
-➡ Mitigation: Use a multi-cloud strategy and design the system to be cloud-agnostic where possible.
+**Risk: Vendor lock-in**
+Mitigation: Use a multi-cloud strategy and design the system to be cloud-agnostic where possible.
 
-⚠ **Risk: Cost management**
-➡ Mitigation: Implement cost monitoring and optimization tools provided by AWS to manage expenses effectively.
+**Risk: Cost management**
+Mitigation: Implement cost monitoring and optimization tools provided by AWS to manage expenses effectively.
 
-⚠ **Risk: Data privacy concerns**
-➡ Mitigation: Ensure compliance with data privacy regulations and use AWS data residency controls.
+**Risk: Data privacy concerns**
+Mitigation: Ensure compliance with data privacy regulations and use AWS data residency controls.
 
 ## **Next Steps**
 

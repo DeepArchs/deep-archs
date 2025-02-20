@@ -9,12 +9,13 @@
 > List of ADRs
 
 
-| ADR#                                          | Description                                              |
-|-----------------------------------------------|----------------------------------------------------------|
-| [0001](0001-record-architecture-decisions.md) | Record architecture decisions                            |
-| [0002](0002-test1.md)                         | AI-Enhanced Automated Grading for Test 1                 |
-| [0003](0003-test2.md)                         | AI-Assisted Grading for Test 2 (Architecture Submission) |
-| [0004](0004-case-study-variations.md)         | AI-Generated Case Study Variations                       |
+| ADR#                                    | Description                                              |
+|-----------------------------------------|----------------------------------------------------------|
+| [0](0000-record-architecture-decisions) | Record architecture decisions                            |
+| [1](0001-test1)                         | AI-Enhanced Automated Grading for Test 1                 |
+| [2](0002-test2)                         | AI-Assisted Grading for Test 2 (Architecture Submission) |
+| [3](0003-case-study-variations)         | AI-Generated Case Study Variations                       |
+| [4](0004-AWS)                           | AI-Generated Case Study Variations                       |
 
 
 

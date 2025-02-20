@@ -48,22 +48,22 @@ We will adopt **Amazon Bedrock** as the AI tool for Certifiable Inc.'s AI infras
 
 ### **Positive Outcomes**
 
-✅ **Accuracy:** Amazon Bedrock enhances AI model accuracy and relevance by leveraging advanced AI capabilities.
-✅ **Scalability:** Scalable AI solutions ensure efficient handling of varying loads.
-✅ **Performance:** Cloud-based AI services provide high performance and availability for AI-driven functionalities.
-✅ **AI Integration:** Amazon Bedrock enhances the capabilities of automated grading and other AI-driven functionalities.
-✅ **Security:** Robust security measures and compliance with data privacy regulations protect sensitive data.
+* [X]**Accuracy:** Amazon Bedrock enhances AI model accuracy and relevance by leveraging advanced AI capabilities.
+* [X]**Scalability:** Scalable AI solutions ensure efficient handling of varying loads.
+* [X]**Performance:** Cloud-based AI services provide high performance and availability for AI-driven functionalities.
+* [X]**AI Integration:** Amazon Bedrock enhances the capabilities of automated grading and other AI-driven functionalities.
+* [X]**Security:** Robust security measures and compliance with data privacy regulations protect sensitive data.
 
 ### **Risks & Mitigation**
 
-⚠ **Risk: Complexity of integration**
-➡ Mitigation: Use well-documented APIs and tools to facilitate integration with existing AI models.
+**Risk: Complexity of integration**
+Mitigation: Use well-documented APIs and tools to facilitate integration with existing AI models.
 
-⚠ **Risk: Cost management**
-➡ Mitigation: Implement cost monitoring and optimization tools to manage expenses effectively.
+**Risk: Cost management**
+Mitigation: Implement cost monitoring and optimization tools to manage expenses effectively.
 
-⚠ **Risk: Data privacy concerns**
-➡ Mitigation: Ensure compliance with data privacy regulations and use secure access controls for AI-driven processes.
+**Risk: Data privacy concerns**
+Mitigation: Ensure compliance with data privacy regulations and use secure access controls for AI-driven processes.
 
 ## **Next Steps**
 

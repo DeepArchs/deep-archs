@@ -48,22 +48,22 @@ We will adopt the **Fine-Tuning AI pattern** for Certifiable Inc.'s AI infrastru
 
 ### **Positive Outcomes**
 
-✅ **Accuracy:** The Fine-Tuning AI pattern enhances AI model accuracy and relevance by adapting models with domain-specific data.
-✅ **Scalability:** Scalable training mechanisms ensure efficient handling of varying loads.
-✅ **Performance:** Cloud-based AI services provide high performance and availability for AI-driven functionalities.
-✅ **AI Integration:** The Fine-Tuning AI pattern enhances the capabilities of automated grading and other AI-driven functionalities.
-✅ **Security:** Robust security measures and compliance with data privacy regulations protect sensitive data.
+* [X]**Accuracy:** The Fine-Tuning AI pattern enhances AI model accuracy and relevance by adapting models with domain-specific data.
+* [X]**Scalability:** Scalable training mechanisms ensure efficient handling of varying loads.
+* [X]**Performance:** Cloud-based AI services provide high performance and availability for AI-driven functionalities.
+* [X]**AI Integration:** The Fine-Tuning AI pattern enhances the capabilities of automated grading and other AI-driven functionalities.
+* [X]**Security:** Robust security measures and compliance with data privacy regulations protect sensitive data.
 
 ### **Risks & Mitigation**
 
-⚠ **Risk: Complexity of integration**
-➡ Mitigation: Use well-documented APIs and tools to facilitate integration with existing AI models.
+**Risk: Complexity of integration**
+Mitigation: Use well-documented APIs and tools to facilitate integration with existing AI models.
 
-⚠ **Risk: Cost management**
-➡ Mitigation: Implement cost monitoring and optimization tools to manage expenses effectively.
+**Risk: Cost management**
+Mitigation: Implement cost monitoring and optimization tools to manage expenses effectively.
 
-⚠ **Risk: Data privacy concerns**
-➡ Mitigation: Ensure compliance with data privacy regulations and use secure access controls for training data and model storage.
+**Risk: Data privacy concerns**
+Mitigation: Ensure compliance with data privacy regulations and use secure access controls for training data and model storage.
 
 ## **Next Steps**
 

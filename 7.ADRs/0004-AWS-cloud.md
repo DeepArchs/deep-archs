@@ -54,21 +54,21 @@ We will adopt the **AWS cloud platform** for Certifiable Inc.'s infrastructure. 
 
 ### **Positive Outcomes**
 
-✅ **Scalability:** AWS enables seamless scaling to accommodate the growing number of certification requests.
-✅ **Reliability:** Multi-region deployments and failover mechanisms ensure high system availability.
-✅ **Global Accessibility:** CDNs and compliance with local regulations enhance user experience worldwide.
-✅ **AI Capabilities:** AWS AI services provide advanced tools for automated grading and other AI-driven functionalities.
-✅ **Security:** Robust security measures and compliance with data privacy regulations protect sensitive data.
+* [X]**Scalability:** AWS enables seamless scaling to accommodate the growing number of certification requests.
+* [X]**Reliability:** Multi-region deployments and failover mechanisms ensure high system availability.
+* [X]**Global Accessibility:** CDNs and compliance with local regulations enhance user experience worldwide.
+* [X]**AI Capabilities:** AWS AI services provide advanced tools for automated grading and other AI-driven functionalities.
+* [X]**Security:** Robust security measures and compliance with data privacy regulations protect sensitive data.
 
 ### **Risks & Mitigation**
 
-⚠ **Risk: Vendor lock-in**
-➡ Mitigation: Use a multi-cloud strategy and design the system to be cloud-agnostic where possible.
+**Risk: Vendor lock-in**
+Mitigation: Use a multi-cloud strategy and design the system to be cloud-agnostic where possible.
 
-⚠ **Risk: Cost management**
-➡ Mitigation: Implement cost monitoring and optimization tools provided by AWS to manage expenses effectively.
+**Risk: Cost management**
+Mitigation: Implement cost monitoring and optimization tools provided by AWS to manage expenses effectively.
 
-⚠ **Risk: Data privacy concerns**
-➡ Mitigation: Ensure compliance with data privacy regulations and use AWS data residency controls.
+**Risk: Data privacy concerns**
+Mitigation: Ensure compliance with data privacy regulations and use AWS data residency controls.
 
 ---

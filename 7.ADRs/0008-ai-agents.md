@@ -48,22 +48,22 @@ We will adopt **AI Agents in AWS** for Certifiable Inc.'s administrative tasks a
 
 ### **Positive Outcomes**
 
-✅ **Efficiency:** AI Agents automate question moderation and reduce the workload on administrators.
-✅ **Scalability:** Scalable AI solutions ensure efficient handling of varying loads.
-✅ **Performance:** Cloud-based AI services provide high performance and availability for AI-driven functionalities.
-✅ **AI Integration:** AI Agents enhance the capabilities of automated grading and other AI-driven functionalities.
-✅ **Security:** Robust security measures and compliance with data privacy regulations protect sensitive data.
+* [X]**Efficiency:** AI Agents automate question moderation and reduce the workload on administrators.
+* [X]**Scalability:** Scalable AI solutions ensure efficient handling of varying loads.
+* [X]**Performance:** Cloud-based AI services provide high performance and availability for AI-driven functionalities.
+* [X]**AI Integration:** AI Agents enhance the capabilities of automated grading and other AI-driven functionalities.
+* [X]**Security:** Robust security measures and compliance with data privacy regulations protect sensitive data.
 
 ### **Risks & Mitigation**
 
-⚠ **Risk: Complexity of integration**
-➡ Mitigation: Use well-documented APIs and tools to facilitate integration with existing systems.
+**Risk: Complexity of integration**
+Mitigation: Use well-documented APIs and tools to facilitate integration with existing systems.
 
-⚠ **Risk: Cost management**
-➡ Mitigation: Implement cost monitoring and optimization tools to manage expenses effectively.
+**Risk: Cost management**
+Mitigation: Implement cost monitoring and optimization tools to manage expenses effectively.
 
-⚠ **Risk: Data privacy concerns**
-➡ Mitigation: Ensure compliance with data privacy regulations and use secure access controls for AI-driven processes.
+**Risk: Data privacy concerns**
+Mitigation: Ensure compliance with data privacy regulations and use secure access controls for AI-driven processes.
 
 ## **Next Steps**
 
