@@ -13,6 +13,37 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         certSystem   =  softwareSystem "Certification System" "Certifiable Inc software sytem to administer architecture certification process." {
             appTest = container "Apptitude Test Service" {
                 tags "Application"
+                apiGateway = component "API Gateway"
+                test1Service = component "Test 1 Generator ASG K8S"
+                mcDB = component "Aurora Global Cluster Postgres DB" {
+                    tags "Database"
+                    description "Storing the multiple choice answer responses"
+                }
+                saDB = component "Amazon Neptune DB" {
+                    tags "Database"
+                    description "Storing Answers to Short Questions"
+                }
+                agSvc = component "Auto Grading ASG K8S" {
+                        description "Auto evaluates the multiple choice questions"
+                        }
+                smSvc = component "Amazon Sagemaker" {
+                        description "Using the fine tuned Llama model evaluates the short answer questions"
+                }
+                sgSvc = component "Score Generator ASG K8S" {
+                        description "Evalutaes the confidence score returned by Sagemaker and translates it into candidate score"
+                }
+                rgSvc = component "Result Generator ASG K8S" {
+                        description "Consolidates the multiple choice and short answer scores and generates candidate score for Test1"
+                }
+                rqSQS = component "SQS Result Queue" {
+                        description "Sends result in candidate feed"
+                }
+                rtSNS = component "SNS Result Topic" {
+                    description "Triggers email to candidates with result details for Test 1"
+                }
+                
+                
+                
             }
             caseStudy = container "Case Study Test Service" {
                 tags "Application"
@@ -45,6 +76,18 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         examineeUser -> certValidator " To view certificate"
         examinerUser -> fraudDetector "To validate test  flagged by AI as probbale frauds"
 
+        examineeUser -> apiGateway "Reaches out to gateway to initiate Test 1"
+        apiGateway   -> test1Service "Forwards it to ALB of Autoscaling Test 1 Service"
+        test1Service -> mcDB "Stores all mutiple choice question's answers"
+        test1Service -> saDB "Stores all short answers"
+        agSvc -> mcDB "Reads all multiple choice answers and stores the score"
+        smSvc -> saDB "Reads short answers and generstes confidence score using pre engineered prompts and fine tuned Llama and attachments of the short answers using RAG"
+        smSvc -> rgSvc "Forwards the scores of short answers"
+        agSvc -> rgSvc "forwards the scores of multiple choice"
+        rgSvc -> mcDB "Aggregates Scores and stores candidate Test 1 Result"
+        rgSvc -> rqSQS "Publishes scores to result queue"
+        rqSQS -> rtSNS "Sends result in Test 1 result topic"
+        rtSNS -> examineeUser "Sends result to candidate via Email and feeds"
         }
 
     views {
@@ -73,6 +116,18 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
             }
         }
         container certSystem "Container" {
+             include *
+            animation {
+              
+            }
+            autoLayout
+            description "The system context diagram for the Certifiable Inc."
+            properties {
+                structurizr.groups false
+            }
+        }
+        
+        component appTest "ApptitudeTest" {
              include *
             animation {
               
@@ -126,7 +181,9 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
                 opacity 25
             }
         }
-       
+        
+    themes https://static.structurizr.com/themes/amazon-web-services-2023.01.31/theme.json
+    
     }
     
 }
