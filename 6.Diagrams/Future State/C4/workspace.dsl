@@ -114,6 +114,17 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
 
             adminContainer = container "Admin Service" {
                 tags "Application"
+                apiGwAdSv    = component "Api Gateway Admin Service"
+                aiAgents     = component "AI Agent" {
+                        description "interacts with AWS Bedrock - \n uses fine tuned Llama model"
+                }
+                awsBRAdSv    = component "AWS Bedrock for Admin Service" {
+                        description "Uses fine tuned Llama LLM"
+                }
+                userMaintSvc = component "User Maintenance Service" 
+                questAnlyMSc = component "Test Question Analysis Service"
+                caseStudyMSc = component "Case Study Maintenance Service"
+                appTstMSc    = component "Apptitude Test Maintenance Service"
             }
         }
 
@@ -179,6 +190,16 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         certValSvc   -> apiGwCv "Sends HR and Candidate responses"
         apiGwCv      -> hrUser "Sends validation response"
         apiGwCv      -> examineeUser "Sends download response"
+        
+        #Adminastrator Service
+        adminUser    -> apiGwAdSv "Sends maintenance requests - user/ analysis/ casestudy/ apptitude"
+        apiGwAdSv    -> userMaintSvc "Sends user maintenance requests"
+        apiGwAdSv    -> aiAgents "Sends test analysis/ casestudy/ apptitude-test maintenance requests"
+        aiAgents     -> awsBrAdSv "Uses Amazon Bedrock fine tuned LLM"
+        awsBrAdSv    -> questAnlyMSc "Sends updates for question maintenance"
+        awsBrAdSv    -> caseStudyMSc "Sends updates for case study maintenance"
+        awsBrAdSv    -> appTstMsc "Sends updates for apptitude test maintenance" 
+        
         
     }
 
@@ -256,6 +277,18 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         }
         
         component certValidator "CertificationValidatorService" {
+             include *
+            animation {
+              
+            }
+            autolayout lr
+            description "The system component diagram for the Certifiable Inc."
+            properties {
+                structurizr.groups false
+            }
+        }
+        
+        component adminContainer "AdministrationService" {
              include *
             animation {
               
