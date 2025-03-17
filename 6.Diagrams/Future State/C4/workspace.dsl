@@ -41,9 +41,6 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
                 rtSNS = component "SNS Result Topic" {
                     description "Triggers email to candidates with result details for Test 1"
                 }
-                
-                
-                
             }
             caseStudy = container "Case Study Test Service" {
                 tags "Application"
@@ -91,6 +88,20 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
             }
             testAudit = container "Audit Service" {
                 tags "Application"
+                s3Au     = component "Test Submission Storage" {
+                    description "AWS S3"
+                }
+                auInitS  = component "Identifies submissions to be expert audited"
+                dataLake = component "Certifiable Inc Data Lake" {
+                    tags "Database" "Start"
+                    description "Amazon Redshift DB \n START"
+                }
+                expAAu   = component "Expert Allocator Service"
+                snsAu    = component "SNS Topic for Audit Result"
+                dataB    = component "Databases" {
+                    tags "Database"
+                    description "Database score tables"
+                }
             }
             fraudDetector = container "Fraud Detector Service" {
                 tags "Application"
@@ -117,8 +128,6 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
                 evalSNS = component "AWS SNS - Detected Fraud Topic" {
                     description "Holds the final fraud evaluation topic"
                 }
-                
-                
             }
             certValidator = container "Certificate Validator Service" {
                 tags "Application"
@@ -129,7 +138,6 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
                     description "Holds certification Details \n part of Case Study System"
                 }
             }
-
             adminContainer = container "Admin Service" {
                 tags "Application"
                 apiGwAdSv    = component "Api Gateway Admin Service"
@@ -228,6 +236,14 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         examinerUser -> rvAgSr "Sends review details"
         rvAgSr       -> snsSr "Adds record to review details topic"
         rvAgSr       -> examineeUser "Notifies candidates"
+        
+        #Audit Service
+        dataLake -> auInitS "Identifies and pulls test submissions to be audited"
+        auInitS -> expAAu "Sends request to expert allocaror"
+        expAAu  -> examinerUser "Identifies and notifies experts"
+        examinerUser -> s3Au "Downloads Submission package"
+        examinerUser -> snsAu "Completes audit and updates topic"
+        snsAu -> dataB "Updates scores in all database tables"
     }
 
     views {
@@ -328,6 +344,18 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         }
         
         component scoreReview "ScoreReviewRequestorService" {
+             include *
+            animation {
+              
+            }
+            autolayout lr
+            description "The system component diagram for the Certifiable Inc."
+            properties {
+                structurizr.groups false
+            }
+        }
+        
+        component testAudit "ScoreAuditService" {
              include *
             animation {
               
