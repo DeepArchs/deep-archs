@@ -104,6 +104,12 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
             }
             certValidator = container "Certificate Validator Service" {
                 tags "Application"
+                apiGwCv    = component "API Gateway Certificate Validator"
+                certValSvc = component "Certificate Validator Service \n ASG K8S"
+                certDBCv   = component "Certification Status DB" {
+                    tags "Database"
+                    description "Holds certification Details \n part of Case Study System"
+                }
             }
 
             adminContainer = container "Admin Service" {
@@ -165,7 +171,14 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         evalAgg      -> evalSNS "Sends detected frauds to fraud detected topic"
         evalSNS      -> examineeUser "Sends email and feed to candidate"
         
-        
+        #Certificate Validator Service
+        hrUser       -> apiGwCv "Sends certificate validation request"
+        examineeUser -> apiGwCv "Sends certificate download request"
+        apiGwCv      -> certValSvc "Forwards requests from users"
+        certValSvc   -> certDBCv "Checks certification status"
+        certValSvc   -> apiGwCv "Sends HR and Candidate responses"
+        apiGwCv      -> hrUser "Sends validation response"
+        apiGwCv      -> examineeUser "Sends download response"
         
     }
 
@@ -231,6 +244,18 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         }
         
         component caseStudy "CaseStudyService" {
+             include *
+            animation {
+              
+            }
+            autolayout lr
+            description "The system component diagram for the Certifiable Inc."
+            properties {
+                structurizr.groups false
+            }
+        }
+        
+        component certValidator "CertificationValidatorService" {
              include *
             animation {
               
