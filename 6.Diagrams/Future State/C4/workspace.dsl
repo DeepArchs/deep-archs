@@ -47,6 +47,26 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
             }
             caseStudy = container "Case Study Test Service" {
                 tags "Application"
+                elgbltyDB = component "Amazon Aurora Global Cluster\n Postgres DB"
+                apiGW     = component "API Gateway"
+                testDownl = component "Test Downloader AGS K8S" {
+                    description "Selects and sends case study question to candidates"
+                }
+                qDB       = component "Aurora GC Postgres DB" {
+                    tags "Database"
+                    description "Case Study Question Repository"
+                }
+                intakeSvc = component "Submission intake ASG K8S"
+                s3Store   = component "AWS S3 \n stores all candidate submissions"
+                ragScorer = component "AWS Sagemaker"
+                scAgg     = component "Candidate Score Generator ASG K8S" {
+                    description "Uses RAG, fine trained Llama and Neptune DB to evaluate casestudy and generate confidence poiints on each pre engineered prompts"
+                }
+                finScSNS  = component "SNS \n Case Study Score Topic"
+                certDB    = component "Aurora Global Cluster Postgres DB" {
+                    tags "Database"
+                    description "Certified Candidates DB"
+                }
             }
             scoreReview = container "Score Review Service" {
                 tags "Application"
@@ -58,8 +78,8 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
                 tags "Application"
                 
                 s3Storage = component "Amazon S3" {
-                    description "START \n S3 - Stores all Test 2 submissions"
                     tags "Start"
+                    description "START \n S3 - Stores all Test 2 submissions"
                 }
                 lambdaSvc = component "AWS Lambda Service" {
                     description "Gets event triggered with each new submissions stored in S3"
@@ -117,6 +137,24 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         rqSQS -> rtSNS "Sends result in Test 1 result topic"
         rtSNS -> examineeUser "Sends result to candidate via Email and feeds"
         
+        #Case Study Flow
+        examineeUser -> apiGW "Sends request to download Test 2"
+        apiGW        -> testDownl "Forwards request to Test Downloader Service"
+        testDownl    -> elgbltyDB "Requests candidate eligibility record"
+        testDownl    -> qDB "Selects case study from question bank"
+        testDownl    -> examineeUser "Sends feed to eligible candidates with casestudy link"
+        examineeUser -> apiGW "Uploads answer packet"
+        apiGW        -> intakeSvc "Send sinfo to intake service"
+        intakeSvc    -> elgbltyDB "Validates submission windows"
+        intakeSvc    -> examineeUser "Sends submission initial status valid/invalid"
+        intakeSvc    -> s3Store "Stores submission packet"
+        intakeSvc    -> ragScorer "Evaluate submission request"
+        ragScorer    -> scAgg "Sends confidence scores to pre-engineered prompts \n and test evaluation report"
+        scAgg        -> CertDB "Calculates and stores final scores and certified status"
+        scAgg        -> finScSns "Sends scores and certification status to SNS Topic"
+        finScSns     -> examineeUser "Sends email and feed"
+        
+        
         #Fraud Detection Flow
         s3Storage -> lambdaSvc "Each submission storage in S3 triggers events for lambda"
         lambdaSvc -> aBR "Sends requests with submission details"
@@ -126,6 +164,8 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         examinerUser -> evalAgg "Sends final fraud evaluation"
         evalAgg      -> evalSNS "Sends detected frauds to fraud detected topic"
         evalSNS      -> examineeUser "Sends email and feed to candidate"
+        
+        
         
     }
 
@@ -179,6 +219,18 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         }
         
         component fraudDetector "FraudDetector" {
+             include *
+            animation {
+              
+            }
+            autolayout lr
+            description "The system component diagram for the Certifiable Inc."
+            properties {
+                structurizr.groups false
+            }
+        }
+        
+        component caseStudy "CaseStudyService" {
              include *
             animation {
               
