@@ -56,6 +56,31 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
             }
             fraudDetector = container "Fraud Detector Service" {
                 tags "Application"
+                
+                s3Storage = component "Amazon S3" {
+                    description "START \n S3 - Stores all Test 2 submissions"
+                    tags "Start"
+                }
+                lambdaSvc = component "AWS Lambda Service" {
+                    description "Gets event triggered with each new submissions stored in S3"
+                }
+                aBR = component "Amazon Bedrock" {
+                    description "Detects fraud - uses RAG, lexical and semantic search on Neptune DB, which contains all previous submissions, and fine trained Llama"
+                }
+                expA = component "Expert Allocator ASG K8S" {
+                    description "Identifyies and allocates experts or examiners to evaluate Fraud alerts"
+                }
+                alertSNS = component "AWS SNS"{
+                    description "Contains fraud alert topic"
+                }
+                evalAgg = component "Evaluation Aggregator ASG K8S"{
+                    description "Aggregates the evaluation made by examiners"
+                }
+                evalSNS = component "AWS SNS - Detected Fraud Topic" {
+                    description "Holds the final fraud evaluation topic"
+                }
+                
+                
             }
             certValidator = container "Certificate Validator Service" {
                 tags "Application"
@@ -66,6 +91,7 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
             }
         }
 
+        #Containers
         examineeUser -> appTest "Uses to take Apptitude Test"
         examineeUser -> caseStudy "Uses to download and submit case study Test"
         examineeUser -> scoreReview "To request score review"
@@ -76,19 +102,32 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         examineeUser -> certValidator " To view certificate"
         examinerUser -> fraudDetector "To validate test  flagged by AI as probbale frauds"
 
+        #Apptitude Test 1 Flow
         examineeUser -> apiGateway "Reaches out to gateway to initiate Test 1"
         apiGateway   -> test1Service "Forwards it to ALB of Autoscaling Test 1 Service"
         test1Service -> mcDB "Stores all mutiple choice question's answers"
         test1Service -> saDB "Stores all short answers"
-        agSvc -> mcDB "Reads all multiple choice answers and stores the score"
+        mcDB  -> agSvc "Reads all multiple choice answers and stores the score"
         smSvc -> saDB "Reads short answers and generstes confidence score using pre engineered prompts and fine tuned Llama and attachments of the short answers using RAG"
-        smSvc -> rgSvc "Forwards the scores of short answers"
-        agSvc -> rgSvc "forwards the scores of multiple choice"
+        smSvc -> sgSvc "Forwards the confidence scores of short answers"
+        sgSvc -> rgSvc "Translates and sends the confidence scores into Graded Score"
+        agSvc -> rgSvc "Forwards the scores of multiple choice"
         rgSvc -> mcDB "Aggregates Scores and stores candidate Test 1 Result"
         rgSvc -> rqSQS "Publishes scores to result queue"
         rqSQS -> rtSNS "Sends result in Test 1 result topic"
         rtSNS -> examineeUser "Sends result to candidate via Email and feeds"
-        }
+        
+        #Fraud Detection Flow
+        s3Storage -> lambdaSvc "Each submission storage in S3 triggers events for lambda"
+        lambdaSvc -> aBR "Sends requests with submission details"
+        aBr       -> expA "Sends fraud alerts"
+        expA      -> alertSNS "Stores alerts in SNS Fraud Alert Topic"
+        alertSNS  -> examinerUser "Sends email and feed for examiners"
+        examinerUser -> evalAgg "Sends final fraud evaluation"
+        evalAgg      -> evalSNS "Sends detected frauds to fraud detected topic"
+        evalSNS      -> examineeUser "Sends email and feed to candidate"
+        
+    }
 
     views {
          systemLandscape certSystem "SystemLandscape" {
@@ -121,7 +160,7 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
               
             }
             autoLayout
-            description "The system context diagram for the Certifiable Inc."
+            description "The system container diagram for the Certifiable Inc."
             properties {
                 structurizr.groups false
             }
@@ -133,7 +172,19 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
               
             }
             autoLayout
-            description "The system context diagram for the Certifiable Inc."
+            description "The system component diagram for the Certifiable Inc."
+            properties {
+                structurizr.groups false
+            }
+        }
+        
+        component fraudDetector "FraudDetector" {
+             include *
+            animation {
+              
+            }
+            autolayout lr
+            description "The system component diagram for the Certifiable Inc."
             properties {
                 structurizr.groups false
             }
