@@ -68,8 +68,26 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
                     description "Certified Candidates DB"
                 }
             }
-            scoreReview = container "Score Review Service" {
+            scoreReview = container "Score Review Requestor Service" {
                 tags "Application"
+                apiGwSr = component "Api Gateway for Score Review Service"
+                intkSr  = component "Review Request Intake Service" {
+                    description "ASG K8S"
+                }
+                snsSr   = component "SNS for Score Review" {
+                    tags "SNS"
+                    description "Score Review Topic"
+                }
+                expASr  = component "Expert Allocator Service" {
+                    description "Same component used in fraud detection and audit containers"
+                }
+                S3Sr    = component "Test Submission Storage" {
+                    description "AWS S3"
+                }
+                snsSrR  = component "SNS review details topic"
+                rvAgSr  = component "Review Aggregator Service" {
+                    description "ASG K8S"
+                }
             }
             testAudit = container "Audit Service" {
                 tags "Application"
@@ -200,7 +218,16 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         awsBrAdSv    -> caseStudyMSc "Sends updates for case study maintenance"
         awsBrAdSv    -> appTstMsc "Sends updates for apptitude test maintenance" 
         
-        
+        #Score Review Requestor Service
+        examineeUser -> apiGwSr "Sends score review request"
+        apiGwSr      -> intkSr "Routes request to Intake Service"
+        intkSr       -> snsSr "Adds a record to score review request topic"
+        expASr       -> snsSr "Consumes score review topic"
+        expAsr       -> examinerUser "Indentifies and notifies experts"
+        examinerUser -> S3Sr "Downloads submission packages"
+        examinerUser -> rvAgSr "Sends review details"
+        rvAgSr       -> snsSr "Adds record to review details topic"
+        rvAgSr       -> examineeUser "Notifies candidates"
     }
 
     views {
@@ -289,6 +316,18 @@ workspace "Certifiable Inc" "This is the AI upgrade of the Testing Platform and 
         }
         
         component adminContainer "AdministrationService" {
+             include *
+            animation {
+              
+            }
+            autolayout lr
+            description "The system component diagram for the Certifiable Inc."
+            properties {
+                structurizr.groups false
+            }
+        }
+        
+        component scoreReview "ScoreReviewRequestorService" {
              include *
             animation {
               
