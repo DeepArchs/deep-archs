@@ -35,4 +35,4 @@ Hi there! 👋 We are team <b title="Deep Archs">Deep Archs</b> and we are glad 
 
 - [Ivan Georgiev](https://www.linkedin.com/in/ivan-georgiev-859b219/)
 - [Anton Akusok](https://fi.linkedin.com/in/antonakusok)
-- [Soumik Das](https://www.linkedin.com/in/soumikdas22)
+- [Soumik Das](https://www.linkedin.com/in/soumikdas22) 

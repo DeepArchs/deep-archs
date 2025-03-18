@@ -32,7 +32,7 @@ variations. Additionally, AI-powered **certification verification** streamlines 
 [Process Flow](../6.Diagrams/Future%20State/scenario-based-flow-diagrams.drawio.svg) | 
 [Overall Architecture](../6.Diagrams/Future%20State/overall-impl-architecture.drawio.svg) | [AI Architecture](../6.Diagrams/Future%20State/ai-architecture.png)
 
-## Ai Solutions C4 Diagrams
+## AI Solutions C4 Diagrams
 
 ### System Context
 
