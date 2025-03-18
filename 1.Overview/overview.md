@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](../readme.md)  |  [Next >](../2.Business-goals/readme)
+[< Prev](../readme.md)  |  [Next >](../2.Business-goals/business-goals.md)
 
 ---
 
@@ -31,36 +31,6 @@ variations. Additionally, AI-powered **certification verification** streamlines 
 
 [Process Flow](../6.Diagrams/Future%20State/scenario-based-flow-diagrams.drawio.svg) | 
 [Overall Architecture](../6.Diagrams/Future%20State/overall-impl-architecture.drawio.svg) | [AI Architecture](../6.Diagrams/Future%20State/ai-architecture.png)
-
-## AI Solutions C4 Diagrams
-
-### System Context
-
-![System Context](../6.Diagrams/Future%20State/C4/structurizr-SystemContext.png)
-
-### Container View
-![Containers](../6.Diagrams/Future%20State/C4/structurizr-Container.png)
-
-### Apptitude Test Component
-![Apptitude Test](../6.Diagrams/Future%20State/C4/structurizr-ApptitudeTest.png)
-
-### Case Study Test Component
-![Casestudy](../6.Diagrams/Future%20State/C4/structurizr-CaseStudyService.png)
-
-### Fraud Detector Component
-![Fraud etector](../6.Diagrams/Future%20State/C4/structurizr-FraudDetector.png)
-
-### Score Review Requestor Component
-![Score Review](../6.Diagrams/Future%20State/C4/structurizr-ScoreReviewRequestorService.png)
-
-### Audit Component
-![Audit](../6.Diagrams/Future%20State/C4/structurizr-ScoreAuditService.png)
-
-### Administration Service Component
-![Containers](../6.Diagrams/Future%20State/C4/structurizr-AdministrationService.png)
-
-### Certificate Validator Component
-![Certificate Validator](../6.Diagrams/Future%20State/C4/structurizr-CertificationValidatorService.png)
 
 
 ## Project Scope
@@ -124,7 +94,39 @@ The AI enhancements will focus on:
 - **Seamless AI-assisted candidate support** improving user experience.
 - **Scalable AI implementation** handling increased certification demand.
 
+## AI Solutions C4 Diagrams
+
+### System Context
+
+![System Context](../6.Diagrams/Future%20State/C4/structurizr-SystemContext.png)
+
+### Container View
+![Containers](../6.Diagrams/Future%20State/C4/structurizr-Container.png)
+
+### Apptitude Test Component
+![Apptitude Test](../6.Diagrams/Future%20State/C4/structurizr-ApptitudeTest.png)
+
+### Case Study Test Component
+![Casestudy](../6.Diagrams/Future%20State/C4/structurizr-CaseStudyService.png)
+
+### Fraud Detector Component
+![Fraud etector](../6.Diagrams/Future%20State/C4/structurizr-FraudDetector.png)
+
+### Score Review Requestor Component
+![Score Review](../6.Diagrams/Future%20State/C4/structurizr-ScoreReviewRequestorService.png)
+
+### Audit Component
+![Audit](../6.Diagrams/Future%20State/C4/structurizr-ScoreAuditService.png)
+
+### Administration Service Component
+![Containers](../6.Diagrams/Future%20State/C4/structurizr-AdministrationService.png)
+
+### Certificate Validator Component
+![Certificate Validator](../6.Diagrams/Future%20State/C4/structurizr-CertificationValidatorService.png)
+
 
 ---
 
-[< Prev](../readme.md)  |  [Next >](../2.Business-goals/readme)
+
+
+[< Prev](../readme.md)  |  [Next >](../2.Business-goals/business-goals.md)

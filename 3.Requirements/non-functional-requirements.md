@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](functional-requirements.md)  |  [Next >](../4.Problem-background/readme.md)
+[< Prev](../3.Requirements/functional-requirements.md)  |  [Next >](../4.Prolem-background/ai-integration-opportunity.md)
 
 ---
 
@@ -612,4 +612,4 @@ By identifying and addressing these legal and compliance constraints, Certifiabl
 
 ---
 
-[< Prev](functional-requirements.md)  |  [Next >](../4.Problem-background/readme.md)
+[< Prev](../3.Requirements/functional-requirements.md)  |  [Next >](../4.Prolem-background/ai-integration-opportunity.md)

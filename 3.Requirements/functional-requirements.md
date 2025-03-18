@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](readme)  |  [Next >](non-functional-requirements.md)
+[< Prev](../1.Business-goals/business-goals.md)  |  [Next >](../3.Requirements/non-functional-requirements.md)
 
 ---
 
@@ -63,4 +63,4 @@ __*Business Objective:*__ *Reduce expert workloads by providing auto-grading opt
 
 ---
 
-[< Prev](readme)  |  [Next >](non-functional-requirements.md)
+[< Prev](../1.Business-goals/business-goals.md)  |  [Next >](../3.Requirements/non-functional-requirements.md)

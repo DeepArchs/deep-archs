@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](../1.Overview/readme.md)  |  [Next >](../3.Drivers-requirements/readme.md)
+[< Prev](../1.Overview/overview.md)  |  [Next >](../3.Requirements/functional-requirements.md)
 
 ---
 
@@ -125,4 +125,4 @@ ensure successful project outcomes.
 
 ---
 
-[< Prev](../1.Overview/readme.md)  |  [Next >](../3.Drivers-requirements/readme.md)
+[< Prev](../1.Overview/overview.md)  |  [Next >](../3.Requirements/functional-requirements.md)
