@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](legacy-system-challenges.md)  |  [Next >](../5.Proposed-solution/readme.md)
+[< Prev](../3.Requirements/non-functional-requirements.md)  |  [Next >](../4.Prolem-background/legacy-system-challenges.md)
 
 ---
 
@@ -83,16 +83,7 @@ Generative AI is a very simple thing by itself: an open-text query called "promp
 Cost optimisation is an important part of AI systems, as heavy usage of a 3rd party AI providers could get expensive. There are at least two ways of cost reduction. The most efficient one is evaluating cheaper models, that can be employed if their performance is proven sufficient. The price difference between expensive specialized models and cheap open source deployments can exceed 100x. The second way is prompt and output optimization, reducing the amount of text that goes in and out of a model. AI model computation requirements, and thus costs, relate directly to the amount of incoming and outbounding text. Evaluating alternative prompts uses the same tools as evaluating alternative models, and is judged by the same criteria.
 
 
-### **Tasks**
-* [X] Explore AI-based enhancements
-* [X] Identify automation opportunities
-* [ ] Assess AI’s impact on business goals
-* [X] List potential AI technologies to integrate
-* [X] Define expected AI-driven benefits
-* [X] Address AI-related risks and limitations
-* [X] Determine AI implementation feasibility
-
 
 ---
 
-[< Prev](legacy-system-challenges.md)  |  [Next >](../5.Proposed-solution/readme.md)
+[< Prev](../3.Requirements/non-functional-requirements.md)  |  [Next >](../4.Prolem-background/legacy-system-challenges.md)

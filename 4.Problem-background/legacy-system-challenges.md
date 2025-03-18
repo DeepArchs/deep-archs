@@ -1,6 +1,6 @@
 [> Home](../readme.md)
 
-[< Prev](readme)  |  [Next >](ai-integration-opportunity.md)
+[< Prev](../4.Prolem-background/ai-integration-opportunity.md)  |  [Next >](../4.Prolem-background/stakeholder-insights.md)
 
 ---
 
@@ -48,16 +48,7 @@ Specific integration challenges are:
 
 
 
-### **Tasks**
-* [X] Identify bottlenecks in the legacy system
-* [X] Document system performance issues
-* [X] Highlight security vulnerabilities
-* [X] Identify high-maintenance components
-* [X] List outdated technologies
-* [X] Assess integration challenges
-* [X] Evaluate user dissatisfaction and feedback
-
 
 ---
 
-[< Prev](readme)  |  [Next >](ai-integration-opportunity.md)
+[< Prev](../4.Prolem-background/ai-integration-opportunity.md)  |  [Next >](../4.Prolem-background/stakeholder-insights.md)
