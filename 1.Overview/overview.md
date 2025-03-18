@@ -24,6 +24,9 @@ variations. Additionally, AI-powered **certification verification** streamlines 
 **scalable, cost-efficient AI-human hybrid system** enhances accuracy, efficiency, and fairness, reinforcing
 **Certifiable, Inc.'s** position as a leader in software architecture certification.
 
+## Challenge Video 
+[![Video Presentation on AI Based Solutions](/Users/soumik/arch-karta/deep-archs/assets/Certifiable Inc Logo.png)](https://www.youtube.com/watch?v=3ylwsr-H2U8)
+
 ## Diagrams
 
 [Process Flow](../6.Diagrams/Future%20State/scenario-based-flow-diagrams.drawio.svg) | 
